@@ -1,4 +1,23 @@
-ETL compared to ELT
+# ETL compared to ELT
 
 ELT works well for high-volume (large amounts), high-variety (unstructured) datasets that require high velocity (constant loading). It also works well for big data because you can plan for analytics after data extraction and storage. It performs most transformations in the analytics stage, and focuses on loading minimally processed raw data into the data warehouse.
 Extract, transform, and load (ETL) and extract, load, and transform (ELT) are two data-processing approaches for analytics. Large organizations have several hundred (or even thousands) of data sources from all aspects of their operations—such as applications, sensors, IT infrastructure, and third-party partners. They need to filter, sort, and clean this large data volume to make it useful for analytics and business intelligence. The ETL approach uses a set of business rules to process data from several sources before they are centrally integrated. The ELT approach loads data as-is and transforms it at a later stage, depending on the use case and analytics requirements. The ETL process requires more definition at the beginning. Analytics must be involved from the start to define target data types, structures, and relationships. Data scientists mainly use ETL to load legacy databases in the data warehouse, while ELT has become the norm today.
+
+# What are the similarities between ETL and ELT?
+Both extract, transform, and load (ETL) and extract, load, and transform (ELT) are sequences of processes that prepare data for further analysis. They capture, process, and load data for analysis across three steps.
+
+### Extraction
+Extraction is the first step of both ETL and ELT. This step is about collecting raw data from different sources. These data sources could be databases, files, software as a service (SaaS) applications, Internet of Things (IoT) sensors, or application events. You can collect semi-structured, structured, or unstructured data at this stage.
+
+### Transformation
+In the ETL process, transformation is the second step. However, in the ELT process, transformation is the third step. This step focuses on changing raw data from its original structure into a format that meets the requirements of the target system where you plan to store the data for analytics. Here are some examples of transformation:
+
+Changing data types or formats
+Removing inconsistent or inaccurate data.
+
+Removing data duplication.
+
+You apply rules and functions to clean and prepare data for analysis in the target system.
+
+### Load
+In this phase, you store data into the target database. ETL processes load data as a final step, so that reporting tools can use it directly to generate actionable reports and insights. However, in ELT, you still need to transform the extracted data after loading it.
